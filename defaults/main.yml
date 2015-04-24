@@ -1,7 +1,21 @@
 ---
 nvm:
-  user: 'vagrant'
+  user: "{{ ansible_user_id }}"
   version: v0.20.0
   node_version: '0.10'
   profile_file: '~/.profile'
   packages: []
+  dependencies:
+    apt:
+      - git
+      - curl
+      - build-essential
+      - libssl-dev
+    yum:
+      - git
+      - gcc
+      - gcc-c++
+      - make
+      - openssl-devel
+      - libselinux-python
+
