@@ -3,23 +3,31 @@ nvm
 
 Install nvm and Node.js.
 
-Requirements
+This role is an extension of [leonidas/ansible-nvm role](https://github.com/leonidas/ansible-nvm).
+
+Installation
 ------------
 
-git, curl, build-essential, libssl-dev. Requirements are installed by the role.
-
-Role Variables
---------------
-
-* `nvm.user` Remote user. Defaults to ansible `remote_user`.
-* `nvm.version` nvm version tag, or `HEAD`. Defaults to `v0.4.0`
-* `nvm.node_version` Node.js version. Defaults to `'0.10.'`
-* `nvm.packages` list of package node. Defaults to `'[]'`
+`$ ansible-galaxy install gvillalta99.google_chrome`
 
 Dependencies
 ------------
 
-No depedencies.
+On Fedora:
+
+  - git
+  - gcc
+  - gcc-c++
+  - make
+  - openssl-devel
+  - libselinux-python
+
+On Ubuntu:
+
+  - git
+  - curl
+  - build-essential
+  - libssl-dev
 
 Example Playbook
 ----------------
@@ -35,12 +43,12 @@ Example Playbook
               - bower
               - karma
 
+Requirements
+------------
+
+- Tested on Fedora 19
+
 License
 -------
 
 BSD
-
-Author Information
-------------------
-
-Jarno Keskikangas
