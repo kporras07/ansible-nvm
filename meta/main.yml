@@ -1,23 +1,16 @@
 ---
 galaxy_info:
-  author: Jarno Keskikangas
-  description: Install nvm and Node.js.
-  company: Leonidas
+  author: gvillalta99
+  description: Nvm installation role
   license: BSD
-  min_ansible_version: 1.4
+  min_ansible_version: 1.9
   platforms:
+  - name: Fedora
+    versions:
+      - 19
   - name: Ubuntu
     versions:
-     - precise
-     - quantal
-     - raring
-     - saucy
-  - name: Debian
-    versions:
-     - wheezy
+      - trusty
   categories:
-  - development
-  - packaging
-  - web
-
+    - development
 dependencies: []
