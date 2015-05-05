@@ -20,3 +20,7 @@
   lineinfile:
     dest: "{{ nvm.profile_file }}"
     line: "source {{ nvm.path }}/nvm.sh"
+
+- name: Install nodes
+  shell: "nvm install {{ item }}"
+  with_items: "{{ nvm.node_versions }}"

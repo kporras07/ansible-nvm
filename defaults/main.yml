@@ -3,7 +3,9 @@ nvm:
   path: "{{ ansible_user_dir }}/.nvm"
   user: "{{ ansible_user_id }}"
   version: "v0.20.0"
-  node_version: "0.10"
+  node_versions:
+    - "0.12"
+  default_node_version: "0.12"
   profile_file: "~/.profile"
   packages: []
   dependencies:
