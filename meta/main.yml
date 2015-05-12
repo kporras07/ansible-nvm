@@ -7,7 +7,7 @@ galaxy_info:
   platforms:
   - name: Fedora
     versions:
-      - 19
+      - 21
   - name: Ubuntu
     versions:
       - trusty

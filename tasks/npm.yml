@@ -5,5 +5,8 @@
   changed_when: false
 
 - name: Install general package
-  npm: name={{ item }} global=yes executable={{ npm_executable.stdout }}
+  npm:
+    name: "{{ item }}"
+    global: yes
+    executable: "{{ npm_executable.stdout }}"
   with_items: nvm.packages

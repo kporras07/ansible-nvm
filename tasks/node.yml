@@ -10,5 +10,5 @@
   when: nvm_node_version.stdout.find(nvm.node_version) == -1
 
 - name: Set default node version to installed node
-  command: nvm alias default {{ nvm.node_version }}
+  command: "nvm alias default {{ nvm.node_version }}"
   when: nvm_node_version.stdout.find(nvm.node_version) == -1

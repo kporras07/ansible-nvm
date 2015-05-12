@@ -22,5 +22,5 @@
     line: "source {{ nvm.path }}/nvm.sh"
 
 - name: Install nodes
-  shell: "nvm install {{ item }}"
+  shell: ". {{ nvm.path}}/nvm.sh && nvm install {{ item }}"
   with_items: "{{ nvm.node_versions }}"
