@@ -1,6 +1,6 @@
 ---
 - name: Check for current node version
-  shell: ". {{ nvm.path}}/nvm.sh &&  nvm use {{ nvm.default_node_version }} && node -v"
+  shell: ". {{ nvm.path}}/nvm.sh &&  nvm use {{ nvm.default_node_version }} > /dev/null 2>&1 && node -v"
   register: nvm_node_version
   ignore_errors: yes
   changed_when: false
