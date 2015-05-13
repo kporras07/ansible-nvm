@@ -21,4 +21,3 @@ nvm:
       - make
       - openssl-devel
       - libselinux-python
-
