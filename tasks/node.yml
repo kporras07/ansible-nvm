@@ -5,10 +5,15 @@
   ignore_errors: yes
   changed_when: false
 
+<<<<<<< HEAD
 - name: Install node
   command: ". {{ nvm.path}}/nvm.sh && nvm install {{ nvm.default_node_version }}"
   when: nvm_node_version.stdout.find(nvm.node_version) == -1
 
 - name: Set default node version to installed node
   command: ". {{ nvm.path}}/nvm.sh && nvm alias default {{ nvm.node_version }}"
+=======
+- name: Set default node version to installed node
+  command: ". {{ nvm.path }}/nvm.sh && nvm alias default {{ nvm.node_version }}"
+>>>>>>> fix
   when: nvm_node_version.stdout.find(nvm.node_version) == -1
