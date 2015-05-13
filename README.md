@@ -36,18 +36,24 @@ Example Playbook
       roles:
         - role: nvm
           nvm:
-            user: deploy
-            version: v0.17.3
-            node_version: '0.12'
+            default_node_version: "0.12"
+            node_versions:
+              - '0.12.2'
+              - '0.11'
+              - '0.10'
+              - iojs
             packages:
               - grunt-cli
               - bower
               - yo
+            path: "~/.nvm"
+            profile_file: "~/.zshrc"
+            version: 'v0.20.0'
 
 Requirements
 ------------
 
-- Tested on Fedora 19
+- Tested on Fedora 21
 - Tested on Ubuntu 14.04 (Trusty)
 
 License

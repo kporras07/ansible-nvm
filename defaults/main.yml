@@ -1,13 +1,6 @@
 ---
 nvm:
-  path: "{{ ansible_user_dir }}/.nvm"
-  user: "{{ ansible_user_id }}"
-  version: "v0.20.0"
-  node_versions:
-    - "0.12"
   default_node_version: "0.12"
-  profile_file: "~/.profile"
-  packages: []
   dependencies:
     apt:
       - git
@@ -21,4 +14,9 @@ nvm:
       - make
       - openssl-devel
       - libselinux-python
-
+  node_versions:
+    - "0.12"
+  packages: []
+  path: "{{ ansible_user_dir }}/.nvm"
+  profile_file: "~/.profile"
+  version: "v0.20.0"
